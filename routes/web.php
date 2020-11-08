@@ -13,6 +13,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/*  Estas es un formade retornar vistas que no requieren una gran carga
+    como por ejemplo, politica y privacidad, contacto, quienes somos, etc.
+*/
+
+Route::view('/', 'home');
+Route::view('/about', 'about')->name('about');
+Route::view('/portafolio', 'portafolio')->name('portafolio');
+Route::view('/contact', 'contact')->name('contact');
+
+
+/* Route::get('/', function () {
+    return view('home');
+})->name('home');
+ */
+
+/* Auth::routes(); */
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
