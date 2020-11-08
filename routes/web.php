@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PortafolioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,8 +20,21 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'home');
 Route::view('/about', 'about')->name('about');
-Route::view('/portafolio', 'portafolio')->name('portafolio');
+Route::get('/portafolio', [PortafolioController::class,'index'])->name('portafolio');
 Route::view('/contact', 'contact')->name('contact');
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Route::get('/', function () {
